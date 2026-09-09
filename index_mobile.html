@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>市民団体 奈良まほろ場</title>
+<style>
+:root{--green:#5f9f72;--cream:#fffaf0;--ink:#39433d;--muted:#6f786f;--sakura:#f3a6bd;--orange:#f29a4a;--yellow:#f5d85b;--sky:#8fd5e5;--purple:#b79be8;--mint:#9eddb8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);border-bottom:1px solid #e3ded2}
+.nav{max-width:1080px;margin:auto;padding:17px 24px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:700;letter-spacing:.08em}.logo small{display:block;font-size:10px;font-weight:400;color:#8b9088;letter-spacing:.2em;margin-bottom:3px}nav a{color:var(--ink);text-decoration:none;font-size:13px;margin-left:20px}
+.hero{min-height:690px;display:flex;align-items:flex-end;position:relative;background-image:linear-gradient(90deg,rgba(38,93,58,.62),rgba(38,93,58,.12)),url("https://upload.wikimedia.org/wikipedia/commons/1/1e/005_Autumn_in_Nara_Park%2C_Japan_-_Nara_deer_CC-BY_Creative_Commons_Attribution.jpg");background-size:cover;background-position:center}
+.hero .inner{width:100%;max-width:1080px;margin:auto;padding:80px 24px 92px;color:white;text-shadow:0 2px 12px rgba(0,0,0,.22)}.kicker{font-size:12px;letter-spacing:.24em;margin-bottom:18px}h1{font-size:clamp(42px,7vw,78px);line-height:1.18;font-weight:500;letter-spacing:.08em;margin:0 0 20px}.lead{font-size:18px;line-height:2}
+.btn{display:inline-block;margin-top:20px;padding:13px 26px;border:0;border-radius:999px;color:white;background:linear-gradient(135deg,var(--orange),var(--sakura));text-decoration:none;font-weight:700;box-shadow:0 8px 20px rgba(215,123,69,.22);transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(215,123,69,.3)}
+section{max-width:1080px;margin:auto;padding:86px 24px}.sub{font-size:11px;letter-spacing:.22em;color:var(--green)}h2{font-size:30px;font-weight:500;margin:10px 0 25px}.about{display:grid;grid-template-columns:.8fr 1.5fr;gap:70px}.about p{line-height:2.1;margin:0 0 15px}
+.photo-band{max-width:none;padding:0;background:linear-gradient(135deg,#fff7cf 0%,#e9f8ed 42%,#e7f6ff 72%,#fff0f5 100%)}.photo-grid{max-width:1080px;margin:auto;padding:70px 24px;display:grid;grid-template-columns:1.35fr .8fr;gap:18px}.photo{margin:0}.photo img{width:100%;height:100%;min-height:270px;object-fit:cover;border-radius:18px;display:block}.photo:first-child img{min-height:420px}.caption{font-size:11px;color:var(--muted);margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card:nth-child(1){border-top-color:var(--sakura);background:#fff1f6}.card:nth-child(2){border-top-color:var(--green);background:#eefaf1}.card:nth-child(3){border-top-color:var(--orange);background:#fff4e8}.card{border-radius:22px;border-top:6px solid var(--sakura);padding:30px;min-height:185px;box-shadow:0 8px 24px rgba(60,70,60,.07);transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(60,70,60,.12)}.card h3{font-weight:500}.card p{font-size:14px;line-height:1.9;color:var(--muted)}
+.news{border-top:1px solid #ddd8cc}.newsrow{display:flex;gap:30px;padding:17px 0;border-bottom:1px solid #e4dfd4}.date{min-width:90px;color:#8b9088;font-size:13px}
+.contact{max-width:1030px;margin:20px auto 70px;background:linear-gradient(135deg,#fff0f5,#fff8d8 45%,#e8f8ed);border-radius:24px;text-align:center;padding:60px 24px}.contact p{color:var(--muted)}
+footer{background:#fffdf7;border-top:1px solid #e4dfd4;padding:35px 24px;text-align:center;font-size:11px;color:#8b9088}
+@media(max-width:700px){
+  body{font-size:16px;overflow-x:hidden}
+  header{position:sticky;top:0}
+  .nav{padding:10px 14px;gap:10px}
+  .logo{gap:9px;font-size:14px;line-height:1.25;letter-spacing:.03em}
+  .logo img{width:44px;height:44px;flex:0 0 44px}
+  .logo small{font-size:8px;letter-spacing:.12em;margin-bottom:1px}
+  nav{display:none}
+  .hero{min-height:72svh;align-items:flex-end;background-position:58% center}
+  .hero .inner{padding:58px 18px 54px}
+  .kicker{font-size:10px;letter-spacing:.18em;margin-bottom:12px}
+  h1{font-size:clamp(36px,12vw,52px);line-height:1.2;letter-spacing:.04em;margin-bottom:16px}
+  .lead{font-size:16px;line-height:1.8;margin:0}
+  .btn{display:block;width:100%;max-width:360px;margin:22px auto 0;padding:15px 20px;text-align:center;font-size:16px}
+  section{padding:58px 18px}
+  .sub{font-size:10px;letter-spacing:.18em}
+  h2{font-size:27px;margin:8px 0 22px}
+  .about,.photo-grid{grid-template-columns:1fr;gap:26px}
+  .about p{font-size:15px;line-height:1.9}
+  .photo-grid{padding:38px 14px;gap:14px}
+  .photo:first-child img,.photo img{min-height:0;height:auto;aspect-ratio:4/3}
+  .caption{font-size:10px;line-height:1.5;padding:0 2px}
+  .cards{grid-template-columns:1fr;gap:14px}
+  .card{padding:24px 20px;min-height:0;border-radius:18px}
+  .card h3{margin-top:0;font-size:18px}
+  .card p{font-size:14px;line-height:1.8;margin-bottom:0}
+  .newsrow{display:block;padding:15px 0;line-height:1.7}
+  .date{display:block;margin-bottom:5px;min-width:0;font-size:12px}
+  .contact{margin:10px 14px 44px;padding:44px 18px;border-radius:20px}
+  .contact h2{font-size:26px}
+  .contact p{font-size:14px;line-height:1.8}
+  footer{padding:28px 18px;font-size:10px;line-height:1.7}
+}
+@media(max-width:380px){
+  .logo{font-size:13px}.logo img{width:40px;height:40px;flex-basis:40px}
+  .hero .inner{padding-left:15px;padding-right:15px}
+  h1{font-size:34px}
+}
+.sub{font-weight:700}.logo{color:var(--green);display:flex;align-items:center;gap:12px}.logo img{width:54px;height:54px;object-fit:cover;border-radius:50%;display:block}.logo span{display:block}h2{position:relative;display:inline-block}h2:after{content:"";display:block;width:48px;height:5px;border-radius:99px;background:linear-gradient(90deg,var(--orange),var(--sakura),var(--yellow));margin-top:10px}.photo img{box-shadow:0 10px 25px rgba(60,70,60,.1)}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo"><img src="nara_mahoroba_logo.jpg" alt="市民団体 奈良まほろ場 ロゴ"><span><small>CITIZEN GROUP</small>市民団体 奈良まほろ場</span></div><nav><a href="#about">私たちについて</a><a href="#activity">活動</a><a href="#news">お知らせ</a><a href="#contact">お問い合わせ</a></nav></div></header>
+
+<main>
+<section class="hero"><div class="inner"><div class="kicker">NARA MAHOROBA</div><h1>ゆっくり、話そう。<br>奈良のこと。</h1><p class="lead">人が集まり、話し、つながる。<br>そんな小さな「場」を、奈良のまちに。</p><a class="btn" href="#about">奈良まほろ場について ↓</a></div></section>
+
+<section id="about"><div class="about"><div><div class="sub">ABOUT US</div><h2>奈良まほろ場とは</h2></div><div><p>市民が気軽に集まり、奈良のこと、暮らしのこと、これからのことを語り合える場所を目指しています。</p><p>大きなことを急いで変えるのではなく、まずは顔を合わせて話すことから。そんな穏やかな活動を続けていきます。</p></div></div></section>
+
+<div class="photo-band"><div class="photo-grid">
+<figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/005_Autumn_in_Nara_Park%2C_Japan_-_Nara_deer_CC-BY_Creative_Commons_Attribution.jpg" alt="奈良公園の鹿と紅葉"><figcaption class="caption">奈良公園の鹿と紅葉　Photo: Marek Ślusarczyk / CC BY 3.0</figcaption></figure>
+<figure class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Naramachii02n4592.jpg/3840px-Naramachii02n4592.jpg" alt="ならまちの町並み"><figcaption class="caption">ならまち　Photo: 663highland / CC BY-SA 2.5</figcaption></figure>
+</div></div>
+
+<section id="activity"><div class="sub">ACTIVITY</div><h2>活動</h2><div class="cards"><div class="card"><h3>🫖 おしゃべり会</h3><p>奈良について、日々の暮らしについて。気軽に話せる時間をつくります。</p></div><div class="card"><h3>🌱 地域の活動</h3><p>地域の人たちと一緒に、小さな活動や交流の場を育てます。</p></div><div class="card"><h3>📚 講演・勉強会</h3><p>さまざまなテーマを取り上げ、知り、考え、語り合います。</p></div></div></section>
+
+<section id="news" class="news"><div class="sub">NEWS</div><h2>お知らせ</h2><div class="newsrow"><span class="date">2026.09.03</span><span>市民団体 奈良まほろ場のホームページを準備しています。</span></div><div class="newsrow"><span class="date">2026.10.17</span><span>奈良講演会を開催予定です。</span></div></section>
+
+<section id="contact" class="contact"><div class="sub">CONTACT</div><h2>いっしょに話しませんか。</h2><p>活動への参加やお問い合わせはこちらから。</p><a class="btn" href="mailto:narashiminmahoroba@gmail.com">お問い合わせ →</a></section>
+</main>
+
+<footer>© 市民団体 奈良まほろ場　｜　写真：Wikimedia Commons掲載作品（各写真のクレジット・ライセンスを明記）</footer>
+</body></html>
